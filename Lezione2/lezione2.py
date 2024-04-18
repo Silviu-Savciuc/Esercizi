@@ -12,7 +12,22 @@ name: str = "Mario"
 
 print(f"Ciao {name}")
 
-#Quest variabile contiene il messaggio
+#Questa variabile contiene il messaggio
 message: str = f"Ciao {name}, ti va di imparare u po di Python insime?"
 
 print(message)
+
+"""
+ 2-4. Name Cases: Use a variable to represent a person’s name,
+ and then print that person’s name in lowercase, uppercase, and title case.
+"""
+
+#Questa variabile contiene il nome della persona 
+name: str = "Marco"
+
+#Questa variabile contiene sia il minuscolo che il maiuscolo 
+name_lower: str = name.lower()
+
+name_upper: str = name.upper()
+
+print(f"{name}, {name_upper}, {name_lower}")
