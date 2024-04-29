@@ -344,14 +344,91 @@ for persona, numeri in preferiti_numeri.items():
     for numero in numeri:
         print(f"- {numero}")
 
+"""
+6-11. Cities: Make a dictionary called cities. Use the names of three cities as keys in your dictionary. 
+Create a dictionary of information about each city and include the country that the city is in, its approximate population,
+and one fact about that city. The keys for each city’s dictionary should be something like country, population, and fact. 
+Print the name of each city and all of the information you have stored about it.
+"""
 
+# Creare un dizionario chiamato città
+città = {
+    'Tokyo': {
+        'paese': 'Giappone',
+        'popolazione': '37 milioni',
+        'curiosità': "Tokyo è l'area metropolitana più grande del mondo."
+    },
+    'Roma': {
+        'paese': 'Italia',
+        'popolazione': '2.8 milioni',
+        'curiosità': "Roma è una delle città più antiche del mondo, con una storia che risale a quasi 3.000 anni fa."
+    },
+    'Milano': {
+        'paese': 'Italia',
+        'popolazione': '1.4 milioni',
+        'curiosità': "Milano è conosciuta per la sua grande scena culturale e artistica"
+    }
+}
 
+# Stampare il nome di ogni città e le sue informazioni
+for città, info in città.items():
+    print(f"\nCittà: {città}")
+    print(f"Paese: {info['paese']}")
+    print(f"Popolazione: {info['popolazione']}")
+    print(f"Curiosità: {info['curiosità']}")
+    
+    
+"""
+6-12. Extensions: We’re now working with examples that are complex enough that they can be extended in any number of ways. 
+Use one of the example programs from this chapter, 
+and extend it by adding new keys and values, changing the context of the program, or improving the formatting of the output.
 
+"""    
+# Dizionario delle città con informazioni aggiuntive
+città = {
+    'Tokyo': {
+        'paese': 'Giappone',
+        'popolazione': '37 milioni',
+        'fatto': "Tokyo è l'area metropolitana più grande del mondo.",
+        'monumento_famoso': 'Torre di Tokyo',
+        'lingua': 'Giapponese',
+        'valuta': 'Yen'
+    },
+    'Roma': {
+        'paese': 'Italia',
+        'popolazione': '2.8 milioni',
+        'fatto': "Roma è una delle città più antiche del mondo, con una storia che risale a quasi 3.000 anni.",
+        'monumento_famoso': 'Colosseo',
+        'lingua': 'Italiano',
+        'valuta': 'Euro'
+    },
+    'Milano': {
+        'paese': 'Italia',
+        'popolazione': '1.4 milioni',
+        'fatto': "Milano è nota per la sua fiorente scena culturale e artistica.",
+        'monumento_famoso': 'Duomo di Milano',
+        'lingua': 'Italiano',
+        'valuta': 'Euro'
+    },
+    'New York': {
+        'paese': 'Stati Uniti',
+        'popolazione': '8.4 milioni',
+        'fatto': "New York City è spesso indicata come la capitale culturale, finanziaria e mediatica del mondo.",
+        'monumento_famoso': 'Statua della Libertà',
+        'lingua': 'Inglese',
+        'valuta': 'Dollaro'
+    }
+}
 
-
-
-
-
-
+# Stampare le informazioni per ogni città
+for città, info in città.items():
+    print(f"\n{città.upper()}")
+    print("           ")
+    print(f"Paese: {info['paese']}")
+    print(f"Popolazione: {info['popolazione']}")
+    print(f"Fatto: {info['fatto']}")
+    print(f"Monumento Famoso: {info['monumento_famoso']}")
+    print(f"Lingua: {info['lingua']}")
+    print(f"Valuta: {info['valuta']}")
 
 
