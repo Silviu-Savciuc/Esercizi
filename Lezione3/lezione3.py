@@ -429,7 +429,7 @@ else:
 • Write three versions of this program, making sure each message is printed for the appropriate color alien.
 """
 # Definizione del colore dell'alieno
-alien_color = input("Inserisci il colore dell'alieno (green/yellow/red): ")
+#alien_color = input("Inserisci il colore dell'alieno (green/yellow/red): ")
 
 # Controllo del colore dell'alieno e assegnazione dei punti
 if alien_color == 'green':
@@ -452,7 +452,7 @@ else:
 • If the person is age 65 or older, print a message that the person is an elder.
 """
 
-
+"""
 età = int(input("Inserisci l'età della persona: "))
 
 # Determina lo stadio della vita in base all'età inserita
@@ -469,4 +469,116 @@ elif età < 65:
 else:
     print("Anziano.")
     
+"""
 
+"""
+5-7. Favorite Fruit: Make a list of your favorite fruits, 
+and then write a series of independent if statements that check for certain fruits in your list.
+• Make a list of your three favorite fruits and call it favorite_fruits.
+• Write five if statements. Each should check whether a certain kind of fruit is in your list. 
+If the fruit is in your list, the if block should print a statement, such as You really like Apples!
+"""
+
+#  lista frutta preferita 
+frutta_preferita = ['mela', 'arancia','anguria']
+
+# Verifica se alcuni frutti specifici sono presenti nella lista dei tuoi frutti preferiti
+if 'mela' in frutta_preferita :
+    print("Mi piace la mela")
+if 'arancia' in frutta_preferita :
+    print("Mi piace l'arancia")
+if 'pera' in frutta_preferita :
+    print("Mi piace la pera")
+if 'anguria' in frutta_preferita :
+    print("Mi piace l'anguria ")
+if 'ananas' in frutta_preferita :
+    print("Mi piace l'ananas")
+
+"""
+5-8. Hello Admin: Make a list of five or more usernames, including the name 'admin'. 
+Imagine you are writing code that will print a greeting to each user after they log in to a website.
+Loop through the list, and print a greeting to each user.
+• If the username is 'admin', print a special greeting, such as Hello admin, would you like to see a status report?
+• Otherwise, print a generic greeting, such as Hello Jaden, thank you for logging in again.
+"""
+
+#lista usernames
+usernames = ['admin', 'Luca', 'Francesco', 'anna', 'david']
+
+# stampa un saluto 
+for username in usernames:
+    if username == 'admin':
+        print("Ciao admin, vorresti vedere lo stato attuale?")
+    else:
+        print(f"Ciao {username}.")
+        
+"""
+5-9. No Users: Add an if test to hello_admin.py to make sure the list of users is not empty.
+• If the list is empty, print the message We need to find some users!
+• Remove all of the usernames from your list, and make sure the correct message is printed.
+"""
+
+usernames = []
+
+# Verifica se la lista non è vuota
+if usernames:
+    # Se la lista non è vuota, saluta gli utenti
+    for username in usernames:
+        if username == 'admin':
+            print("Ciao admin, vorresti vedere lo stato attuale?")
+        else:
+            print(f"Ciao {username}.")
+else:
+    print("Dobbiamo trovare utenti")
+    
+"""
+5-10. Checking Usernames: Do the following to create a program that simulates how websites ensure that everyone has a unique username.
+• Make a list of five or more usernames called current_users.
+• Make another list of five usernames called new_users. Make sure one or two of the new usernames are also in the current_users list.
+• Loop through the new_users list to see if each new username has already been used. 
+If it has, print a message that the person will need to enter a new username. 
+If a username has not been used, print a message saying that the username is available.
+• Make sure your comparison is case insensitive. 
+If 'John' has been used, 'JOHN' should not be accepted. 
+(To do this, you’ll need to make a copy of current_users containing the lowercase versions of all existing users.)
+
+"""
+
+# Crea una lista di utenti attuali
+utenti_attuali = ['Luca', 'alice', 'maria', 'Frenk', 'david']
+
+# Crea una lista di nuovi utenti
+nuovi_utenti = ['franceco', 'luca', 'sara', 'emilia', 'DAVID']
+
+# Converte utenti_attuali in minuscolo 
+utenti_attuali_minuscolo = [utente.lower() for utente in utenti_attuali]
+
+for nuovo_utente in nuovi_utenti:
+    # Converte nuovo_utente in minuscolo 
+    nuovo_utente_minuscolo = nuovo_utente.lower()
+    
+    if nuovo_utente_minuscolo not in utenti_attuali_minuscolo:
+        print(f"Il nome utente '{nuovo_utente}' è disponibile.")
+    else:
+        print(f"Il nome utente '{nuovo_utente}' non è disponibile.")
+        
+"""
+5-11. Ordinal Numbers: Ordinal numbers indicate their position in a list, such as 1st or 2nd. 
+Most ordinal numbers end in th, except 1, 2, and 3.
+• Store the numbers 1 through 9 in a list.
+• Loop through the list.
+• Use an if-elif-else chain inside the loop to print the proper ordinal ending for each number.
+Your output should read "1st 2nd 3rd 4th 5th 6th 7th 8th 9th", and each result should be on a separate line.
+"""
+
+numeri = (range(1, 10))
+
+for numero in numeri:
+    if numero == 1:
+        print(f"{numero}st")
+    elif numero == 2:
+        print(f"{numero}nd")
+    elif numero  == 3:
+        print(f"{numero}rd")
+    else:
+        print(f"{numero}th")
