@@ -188,3 +188,47 @@ def count_isolated(numeri) -> int:
     
     return isolati
 
+
+"""
+3. Personal Info:
+
+Write a build_profile() function that accepts
+the name , surname,  occupation, location, and age  of a person.
+Make occupation, location, and age optional parameters.
+Use this function to create profiles for different people,
+demonstrating how it handles these optional parameters.
+
+Example: build_profile("John", "Doe", occupation="Developer", location="USA", age=30)
+
+
+"""
+
+def build_profile(nome, cognome, professione=None, ubicazione=None, eta=None):
+    profilo = {
+        'nome': nome,
+        'cognome': cognome
+    }
+    if professione is not None:
+        profilo['professione'] = professione
+    if ubicazione is not None:
+        profilo['ubicazione'] = ubicazione
+    if eta is not None:
+        profilo['età'] = eta
+    return profilo
+
+# Esempi:
+profilo1 = build_profile("Mario", "Rossi", ubicazione="Italia", eta=35)
+print(profilo1)
+
+profilo2 = build_profile("Anna", "Bianchi", professione="Designer")
+print(profilo2)
+
+profilo3 = build_profile("Luca", "Verdi", ubicazione="Francia")
+print(profilo3)
+
+
+
+"""
+
+
+"""
