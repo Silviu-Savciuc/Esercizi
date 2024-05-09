@@ -226,9 +226,3 @@ print(profilo2)
 profilo3 = build_profile("Luca", "Verdi", ubicazione="Francia")
 print(profilo3)
 
-
-
-"""
-
-
-"""
